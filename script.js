@@ -3,9 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     marker.addEventListener("markerFound", () => {
         console.log("Marker found!");
+        alert("hi");
 
         document.querySelector("#motorOil").addEventListener("click", () => {
             console.log("Motoröl clicked!");
+            alert("clicked");
         });
 
         document.querySelector("#wash").addEventListener("click", () => {
