@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>CARS AR</title>
+
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/1.7.2/aframe/build/aframe-ar.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body style="margin: 0; overflow: hidden;">
+  <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;" vr-mode-ui="enabled: false"
+    renderer="logarithmicDepthBuffer: true;">
+
+    <a-marker type="pattern" url="patternCars.patt">
+
+      <!-- Hintergrund weiß -->
+      <a-plane position="0 0 0" rotation="-90 0 0" width="2" height="3" color="#ffffff" opacity="0.95"></a-plane>
+
+      <!-- Icons -->
+      <a-image class="clickable" id="motorOil" src="Motoröl.png" position="1 1.3 -1.5" rotation="-90 0 0" width="0.5" height="0.5">
+      </a-image>
+
+      <a-image class="clickable" id="wash" src="waschen.png" position="0.5 1.3 -1.5" rotation="-90 0 0" width="0.5" height="0.5">
+      </a-image>
+
+      <a-image class="clickable" id="lightning" src="Blitz.png" position="0 1.3 -1.5" rotation="-90 0 0" width="0.5" height="0.5">
+      </a-image>
+
+      <a-image class="clickable" id="ramon" src="Ramon.png" position="-0.5 1.3 -1.5" rotation="-90 0 0" width="0.5" height="0.5">
+      </a-image>
+
+      <a-image class="clickable" id="chief" src="Chief.png" position="-1 1.3 -1.5" rotation="-90 0 0" width="0.5" height="0.5">
+      </a-image>
+
+
+      <!-- Textbild ganz oben -->
+      <a-image src="textstart.png" position="0 1.3 -1" rotation="-90 0 0" width="1.8" height="0.5">
+      </a-image>
+
+      <!-- Startbild ganz unten -->
+      <a-image src="Start.png" position="0 1.2 0" rotation="-90 0 0" width="1.8" height="1">
+      </a-image>
+
+    </a-marker>
+
+    <a-entity cursor="rayOrigin: mouse" raycaster="objects: .clickable"></a-entity>
+    <a-entity camera>
+
+</body>
+
+</html>
+
+<a-entity camera></a-entity>
+</a-scene>
+</body>
+
+</html>
